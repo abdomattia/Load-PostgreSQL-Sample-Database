@@ -28,5 +28,15 @@ SELECT customer_id,amount FROM payment
 ORDER BY amount DESC
 LIMIT 10;
 
+SELECT customer_id,amount FROM payment
+WHERE amount BETWEEN 7 AND 8;
 
+SELECT customer_id,amount FROM payment
+WHERE payment_date  BETWEEN '2007-02-7' AND '2007-02-15';
+
+SELECT customer_id,amount FROM payment
+WHERE amount NOT BETWEEN 7 AND 8;
+
+SELECT customer_id,amount FROM payment
+WHERE payment_date NOT BETWEEN '2007-02-7' AND '2007-02-15';
 
