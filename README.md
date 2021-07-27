@@ -14,3 +14,6 @@ WHERE first_name='Nancy' AND last_name='Thomas';
 
 SELECT description FROM film
 WHERE title='Outlaw Hanky';
+
+SELECT COUNT(DISTINCT amount) FROM payment;
+
