@@ -47,6 +47,17 @@ ORDER BY return_date ASC;
 SELECT first_name ,email,customer_id FROM customer
 WHERE customer_id IN (1,2,3,4);
 
+SELECT first_name FROM customer
+WHERE first_name LIKE 'Jan%';
+
+SELECT first_name FROM customer
+WHERE first_name LIKE '%er%';
+
+SELECT first_name FROM customer
+WHERE first_name LIKE '_er%';
+
+SELECT first_name FROM customer
+WHERE first_name ILIKE 'Jan%';
 
 
 
