@@ -40,3 +40,17 @@ WHERE amount NOT BETWEEN 7 AND 8;
 SELECT customer_id,amount FROM payment
 WHERE payment_date NOT BETWEEN '2007-02-7' AND '2007-02-15';
 
+SELECT customer_id,return_date FROM rental
+WHERE staff_id IN (1,2)
+ORDER BY return_date ASC;
+
+SELECT first_name ,email,customer_id FROM customer
+WHERE customer_id IN (1,2,3,4);
+
+
+
+
+
+
+
+
