@@ -59,6 +59,22 @@ WHERE first_name LIKE '_er%';
 SELECT first_name FROM customer
 WHERE first_name ILIKE 'Jan%';
 
+SELECT MIN(amount) FROM payment;
+SELECT amount FROM payment 
+ORDER BY amount ASC;
+
+SELECT COUNT(amount) FROM payment 
+WHERE amount =0;
+
+SELECT AVG(amount) FROM payment;
+
+SELECT ROUND(AVG(amount),2) FROM payment;
+
+SELECT SUM(amount) FROM payment;
+
+SELECT ROUND(SUM(amount),3) FROM payment;
+
+SELECT MAX(amount) FROM payment;
 
 
 
