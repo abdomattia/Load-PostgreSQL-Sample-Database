@@ -76,7 +76,22 @@ SELECT ROUND(SUM(amount),3) FROM payment;
 
 SELECT MAX(amount) FROM payment;
 
+GROUP BY
 
+SELECT customer_id FROM payment
+GROUP BY customer_id;
+
+SELECT customer_id,SUM(amount) FROM payment
+GROUP BY customer_id
+ORDER BY SUM(amount) DESC;
+
+SELECT * FROM film;
+SELECT rating FROM film
+GROUP BY rating;
+
+SELECT rating ,COUNT(rating) FROM film 
+GROUP BY rating 
+ORDER BY COUNT(rating) DESC;
 
 
 
