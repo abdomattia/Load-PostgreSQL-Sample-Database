@@ -217,7 +217,25 @@ WHERE rental_rate>2.98;
 SELECT title , rental_rate FROM film
 WHERE rental_rate > (SELECT AVG(rental_rate) FROM film);
 
+Self Join (A very popular question)
 
+Question: What is a Self Join?Answer: A self-join is simply a normal SQL join that joins one table to itself. Joining a table to itself can be useful when you want to compare values in a column to other values in the same column.
+
+Question: Is Self Join Inner Join or Outer Join?Answer: A self-join can be an inner join or an outer join or even a cross join. A table is joined to itself based upon a column that have duplicate data in different rows.
+
+Question: What is a practical use of the Self Join in the real world?Answer: The best example of self join in the real world is when we have a table with Employee data and each row contains information about employee and his/her manager. You can use self join in this scenario and retrieve relevant information. 
+
+
+SELECT * FROM customer;
+
+SELECT a.customer_id, a.first_name,a.last_name,b.customer_id, b.first_name,b.last_name
+FROM customer AS a,customer AS b
+WHERE a.first_name=b.last_name;
+
+SELECT a.first_name,a.last_name,b.first_name,b.last_name
+FROM customer AS a
+JOIN customer AS b 
+ON a.first_name=b.last_name;
 
 
 
