@@ -113,3 +113,28 @@ ORDER BY SUM(amount) DESC
 LIMIT 10;
 
 
+Having 
+
+SELECT* FROM customer;
+
+SELECT store_id ,COUNT(customer_id) FROM customer
+GROUP BY store_id
+HAVING COUNT(customer_id)>300;
+
+SELECT * FROM payment;
+
+SELECT customer_id , SUM(amount) FROM payment
+GROUP BY customer_id 
+HAVING SUM(amount)>200;
+
+SELECT * FROM film;
+
+SELECT rating ,AVG(rental_rate) FROM film 
+GROUP BY rating;
+
+SELECT rating , AVG(rental_rate) FROM film 
+WHERE rating IN ('R','PG','G')
+GROUP BY rating 
+HAVING AVG(rental_rate)>3;
+
+
