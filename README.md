@@ -172,3 +172,12 @@ SELECT * FROM film ;
 SELECT name AS movie_language, title 
 FROM language 
 INNER JOIN film ON language.language_id=film.language_id;
+
+SELECT * FROM film ;
+
+SELECT * FROM inventory;
+
+SELECT film.film_id, title,inventory_id FROM film
+LEFT OUTER JOIN inventory ON film.film_id=inventory.film_id
+WHERE inventory_id IS NULL ;
+
