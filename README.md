@@ -93,6 +93,23 @@ SELECT rating ,COUNT(rating) FROM film
 GROUP BY rating 
 ORDER BY COUNT(rating) DESC;
 
+SELECT * FROM payment ;
 
+SELECT staff_id , COUNT(amount) FROM payment
+GROUP BY staff_id;
+
+SELECT staff_id , SUM(amount) FROM payment
+GROUP BY staff_id;
+
+SELECT staff_id , SUM(amount), COUNT(amount) 
+FROM payment 
+GROUP BY staff_id;
+
+SELECT * FROM payment;
+
+SELECT customer_id, SUM(amount) FROM payment
+GROUP BY customer_id 
+ORDER BY SUM(amount) DESC
+LIMIT 10;
 
 
