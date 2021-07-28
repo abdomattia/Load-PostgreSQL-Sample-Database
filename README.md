@@ -189,3 +189,7 @@ SELECT SUM(amount), extract(month from payment_date)
 FROM payment 
 GROUP BY extract(month from payment_date)
 ORDER BY extract(month from payment_date);
+
+Mathematical Functions
+
+SELECT payment_id*customer_id AS new_id FROM payment;
