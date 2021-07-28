@@ -193,3 +193,22 @@ ORDER BY extract(month from payment_date);
 Mathematical Functions
 
 SELECT payment_id*customer_id AS new_id FROM payment;
+
+
+SELECT * FROM customer;
+
+SELECT first_name || last_name FROM customer;
+
+SELECT first_name || ' ' || last_name AS full_name FROM customer;
+
+SELECT* FROM customer;
+SELECT first_name,char_length(first_name) FROM customer;
+
+SELECT UPPER(first_name) FROM customer;
+SELECT LOWER(first_name) FROM customer;
+
+
+
+
+
+
