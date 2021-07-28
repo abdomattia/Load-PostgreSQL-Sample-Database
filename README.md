@@ -137,4 +137,8 @@ WHERE rating IN ('R','PG','G')
 GROUP BY rating 
 HAVING AVG(rental_rate)>3;
 
+SELECT * FROM payment;
 
+SELECT customer_id , COUNT(amount) FROM payment 
+GROUP BY customer_id
+HAVING COUNT(amount)>=40;
