@@ -165,3 +165,10 @@ INNER JOIN inventory ON film.film_id=inventory.film_id
 WHERE store_id =1
 GROUP BY title
 ORDER BY COUNT(title)DESC;
+
+SELECT * FROM language;
+SELECT * FROM film ; 
+
+SELECT name AS movie_language, title 
+FROM language 
+INNER JOIN film ON language.language_id=film.language_id;
