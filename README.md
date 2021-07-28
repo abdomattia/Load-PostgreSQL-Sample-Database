@@ -153,4 +153,15 @@ FROM customer
 INNER JOIN payment ON customer.customer_id=payment.customer_id
 ORDER BY customer.customer_id ASC;
 
+SELECT * FROM inventory;
+SELECT * FROM film;
 
+SELECT store_id , title FROM film 
+INNER JOIN inventory ON film.film_id=inventory.film_id
+WHERE store_id =1;
+
+SELECT title,COUNT(title) FROM film 
+INNER JOIN inventory ON film.film_id=inventory.film_id
+WHERE store_id =1
+GROUP BY title
+ORDER BY COUNT(title)DESC;
