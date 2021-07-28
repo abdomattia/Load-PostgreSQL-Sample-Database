@@ -207,6 +207,15 @@ SELECT first_name,char_length(first_name) FROM customer;
 SELECT UPPER(first_name) FROM customer;
 SELECT LOWER(first_name) FROM customer;
 
+SUBQUERY 
+
+SELECT * FROM film;
+SELECT AVG(rental_rate) FROM film;
+SELECT title ,rental_rate FROM film
+WHERE rental_rate>2.98;
+
+SELECT title , rental_rate FROM film
+WHERE rental_rate > (SELECT AVG(rental_rate) FROM film);
 
 
 
