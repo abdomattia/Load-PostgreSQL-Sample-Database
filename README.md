@@ -181,3 +181,11 @@ SELECT film.film_id, title,inventory_id FROM film
 LEFT OUTER JOIN inventory ON film.film_id=inventory.film_id
 WHERE inventory_id IS NULL ;
 
+SELECT * FROM payment;
+SELECT payment_date FROM payment;
+SELECT extract(day from payment_date) FROM payment; 
+
+SELECT SUM(amount), extract(month from payment_date)
+FROM payment 
+GROUP BY extract(month from payment_date)
+ORDER BY extract(month from payment_date);
