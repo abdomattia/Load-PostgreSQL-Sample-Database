@@ -142,3 +142,15 @@ SELECT * FROM payment;
 SELECT customer_id , COUNT(amount) FROM payment 
 GROUP BY customer_id
 HAVING COUNT(amount)>=40;
+
+JOIN
+
+SELECT * FROM customer;
+SELECT * FROM payment;
+
+SELECT customer.customer_id,first_name,last_name,email,amount,payment_date
+FROM customer
+INNER JOIN payment ON customer.customer_id=payment.customer_id
+ORDER BY customer.customer_id ASC;
+
+
