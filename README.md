@@ -237,5 +237,17 @@ FROM customer AS a
 JOIN customer AS b 
 ON a.first_name=b.last_name;
 
+CREATE TABLE 
 
+CREATE TABLE customerd(
+customer_id serial PRIMARY KEY NOT NULL ,
+first_name varchar(55) NOT NULL ,
+last_name varchar(55) NOT NULL ,
+email varchar(250) UNIQUE NOT NULL , 
+sign_up_date timestamp ,
+minutes int 
+
+);
+
+SELECT * FROM customerd;
 
