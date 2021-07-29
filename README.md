@@ -283,5 +283,11 @@ UPDATE customerd
 SET minutes =2
 WHERE customer_id=2;
 
+DELETE
 
+DELETE FROM customerd
+WHERE customer_id=3
+RETURNING *;
+
+SELECT * FROM customerd;
 
