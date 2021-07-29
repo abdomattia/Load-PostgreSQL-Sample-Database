@@ -272,5 +272,16 @@ INSERT INTO customerd_like
 
 SELECT * FROM customerd_like;
 
+UPDATE 
+
+UPDATE customerd 
+SET minutes=1;
+
+SELECT * FROM customerd;
+
+UPDATE customerd
+SET minutes =2
+WHERE customer_id=2;
+
 
 
