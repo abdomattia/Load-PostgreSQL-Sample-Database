@@ -291,3 +291,39 @@ RETURNING *;
 
 SELECT * FROM customerd;
 
+ALTER TABLE  ADD COLUMN
+ALTER TABLE  DROP COLUMN
+ALTER TABLE  RENAME COLUMN  TO
+ALTER TABLE  RENAME TO
+
+SELECT * FROM customerd;
+
+
+ALTER TABLE customerd ADD COLUMN active boolean;
+
+SELECT * FROM customerd;
+
+ALTER TABLE customerd DROP column active;
+SELECT * FROM customerd;
+
+ALTER TABLE customerd RENAME first_name TO new_name;
+
+ALTER TABLE customerd RENAME TO customerc;
+
+SELECT * FROM customerc;
+
+
+
+
+
+DROP TABLE IF EXISTS
+
+CREATE TABLE TEST_TABLE(
+ID serial PRIMARY KEY
+);
+
+SELECT * FROM TEST_TABLE;
+
+DROP TABLE TEST_TABLE;
+
+DROP TABLE IF EXISTS TEST_TABLE;
