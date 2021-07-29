@@ -363,3 +363,18 @@ END
 FROM payment;
 
 
+VIEW 
+
+
+SELECT * FROM customer;
+SELECT * FROM address ;
+
+CREATE VIEW Goodcode AS
+SELECT first_name,last_name,customer_id,district
+FROM address 
+INNER JOIN customer 
+on address.address_id=customer.address_id;
+
+SELECT * FROM Goodcode;
+
+
