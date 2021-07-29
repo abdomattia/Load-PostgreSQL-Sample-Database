@@ -251,3 +251,26 @@ minutes int
 
 SELECT * FROM customerd;
 
+INSERT INTO
+
+INSERT INTO customerd (first_name,last_name,email)
+VALUES
+('Ali','Mohsen','abd@yahoo.com');
+
+INSERT INTO customerd (first_name,last_name,email)
+VALUES
+('Mohamed','Yasser','qaz@gmail.com'),
+('Hazem','Ali','mohsen@gmail.com');
+
+SELECT * FROM customerd;
+
+
+CREATE TABLE customerd_like (LIKE customerd);
+
+INSERT INTO customerd_like 
+(SELECT * FROM customerd) ;
+
+SELECT * FROM customerd_like;
+
+
+
