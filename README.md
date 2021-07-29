@@ -350,3 +350,16 @@ INSERT INTO code (date_birth,salary)
 VALUES
 ('1999-04-04',1);
 
+SELECT * FROM payment;
+
+CASE
+
+
+SELECT customer_id , amount ,
+CASE
+WHEN amount >5 THEN 'HIGH'
+ELSE 'LOW'
+END
+FROM payment;
+
+
