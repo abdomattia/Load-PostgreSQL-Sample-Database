@@ -327,3 +327,26 @@ SELECT * FROM TEST_TABLE;
 DROP TABLE TEST_TABLE;
 
 DROP TABLE IF EXISTS TEST_TABLE;
+
+
+CHECK
+
+CREATE TABLE CODE (
+id serial PRIMARY KEY ,
+date_birth date CHECK (date_birth>'1990-01-01'),
+salary int CHECK (salary>0)
+
+);
+
+SELECT * FROM code;
+
+INSERT INTO code (date_birth,salary)
+VALUES
+('1995-01-04',10);
+
+SELECT * FROM code;
+
+INSERT INTO code (date_birth,salary)
+VALUES
+('1999-04-04',1);
+
