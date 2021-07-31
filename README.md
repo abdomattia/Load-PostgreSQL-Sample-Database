@@ -1,6 +1,9 @@
 # Load-PostgreSQL-Sample-Database
 dvdrental
 
+OUR COURSE 
+https://www.youtube.com/watch?v=y1pRvUqFAE8
+
 SELECT * FROM actor;
 
 SELECT actor_id ,first_name FROM actor;
